@@ -1,13 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f1f5f8;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2.5rem 0;
+}
+
+.card {
+  margin: 2rem 0 1rem 0;
+  display: flex;
+  flex-direction: column;
+  width: 720px;
+  height: fit-content;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.card:first-of-type {
+  margin-top: 4rem;
+}
+
+.card footer {
+  padding: 1.75rem;
+  background-color: white;
+}
+
+.card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+.card h1 {
+  margin: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.card .price {
+  margin: 10px;
+  margin-top: 0;
+  font-size: 14px;
+  color: #49a6e9;
+  letter-spacing: 2px;
+  font-weight: bold;
+  background-color: rgba(173, 216, 230, 0.2);
+  width: fit-content;
+  height: fit-content;
+  padding: 5px;
+}
+
+.card .info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card .description {
+  margin: 10px;
+  font-size: 17px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.btn-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-wrap button {
+  margin: 10px;
+  margin-top: 2rem;
+  padding: 8px 16px;
+  border: 1px solid red;
+  border-radius: 4px;
+  background-color: #fff;
+  color: red;
+  font-size: 14px;
+  cursor: pointer;
+  width: 200px;
+  letter-spacing: 2px;
+}
+
+.btn-wrap button:hover {
+  background-color: red;
+  color: white;
+}
+
+.read-more-btn {
+  border: none;
+  background-color: transparent;
+  color: #49a6e9;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.title {
+  position: relative;
+  color: #333;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.title::before,
+.title::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom: 5px solid #49a6e9;
+  width: 10%;
+}
+
+.refresh-btn {
+  margin: 10px;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  background-color: #49a6e9;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  width: 200px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
 }
